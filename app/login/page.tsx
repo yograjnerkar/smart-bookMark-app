@@ -13,7 +13,7 @@ function LoginContent() {
         await supabase.auth.signInWithOAuth({
             provider: "google",
             options: {
-                redirectTo: `https://okndlckbxmyivmvxtcdi.supabase.co/auth/v1/callback`,
+                redirectTo: `${window.location.origin}/auth/callback`,
             },
         });
     };
